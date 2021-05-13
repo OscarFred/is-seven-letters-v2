@@ -21,7 +21,7 @@ class IsSevenLettersTest extends IsSevenLetters {
     }
     public function seven_letters_page() {
         if (isset($_POST['test_function'])) {
-            $this->is_seven_letters_test($_POST['test_string'], $_POST['test_bool']);
+            $this->is_seven_letters_test($_POST['test_string'], ($_POST['test_bool'] === 'true' ? true : false));
         }
         echo '
             <br>
